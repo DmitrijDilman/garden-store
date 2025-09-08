@@ -23,4 +23,3 @@ git checkout main
 git pull
 git switch -c dev
 git push -u origin dev
-
