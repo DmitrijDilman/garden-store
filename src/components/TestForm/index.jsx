@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-// formik
 
 export const TestForm = () => {
   const {
@@ -10,61 +9,71 @@ export const TestForm = () => {
 
   const submitHandler = (data) => {
     console.log(data);
+
     console.log("SUBMIT!");
   };
 
-  const test = register("userName", {
-    required: "это поле обязательное",
-    maxLength: {
-      value: 10,
-      message: "max 10 characters allower",
-    },
-    minLength: {
-      value: 3,
-      message: "user name should be more than 3 characters",
-    },
-  });
 
-  console.log(test);
+  // TODO: regex
+  console.log(errors)
 
-  const test2 = register("email", {
-    required: "это поле обязательное",
-    pattern: {
-      value: "",
-      message: "incorect email",
-    },
-  });
-
-  // form >>>>> submit
   return (
-  <form onSubmit={handleSubmit(submitHandler)}>
-    <div>
-      <input
-        type="text"
-        id="userName"
-        {...register("userName", {
-          required: "это поле обязательное",
-          maxLength: {
-            value: 10,
-            message: "max 10 characters allowed"
-          },
-          minLength: {
-            value: 3,
-            message: "user name should be more than 3"
-          }
-        })}
-      />
-    </div>
+    <form onSubmit={handleSubmit(submitHandler)}>
+      <div>
+        username
+        <input
+          type="text"
+          id="userName"
+          {...register("userName", {
+            required: "Wrong input. Try again",
+            maxLength: {
+              value: 10,
+              message: "max 10 characters allowed",
+            },
+            minLength: {
+              value: 3,
+              message: "user name should be more than 3 characters",
+            },
+          })}
+        />
+        
+      </div>
+      <div>
+        email
+        <input
+          type="email"
+          id="email"
+          {...register("email", {
+            required: "это поле обязательное",
+            pattern: {
+              value: "",
+              message: "incorrect email",
+            },
+          })}
+        />
+     
+      </div>
+      <div>
+        tel
+        <input
+          type="tel"
+          id="tel"
+          {...register("tel", {
+            validate: (value) => {
+              // "4(23) 423-4"
+              if (value) {
+                return true;
+              } else {
+                return "please fill in phone number";
+              }
+            },
+          })}
+        />
+      </div>
+      {errors.userName && <span>{errors.userName.message}</span>}
+         {errors.email && <span>{errors.email.message}</span>}
 
-    <div>
-      <input type="email" id="email" />
-    </div>
-
-    <div>
-      <input type="tel" id="tel" />
-    </div>
-
-      <button type="submit">ok</button>
+      <button type="submit">get a discount</button>
     </form>
   );
 };
