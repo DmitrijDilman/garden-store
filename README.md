@@ -35,6 +35,11 @@ setCounter((prevCounter) => {
 
 Шаги для отправки изменений на GitHub:
 
+git checkout sprint-1          # убедиться, что стоишь на спринте
+git pull                       # подтянуть последние изменения
+git checkout -b feature/header # новая ветка для задачи
+
+
 git add .
 git commit -m "обновил README и добавил новые файлы"
 git push

@@ -7,12 +7,12 @@ import { useContext } from "react";
 import { productsContext } from "../../contexts/products";
 
 export const Menu = () => {
-  const {a} = useContext(productsContext);
+  // const {a} = useContext(productsContext);
 
 
   return (
     <nav className={styles.navigationWrapper}>
-      <div>{a}</div>
+      {/* <div>{a}</div> */}
       <div className={styles.logo}>
         <Link to='/'>
            <img src={logo} alt="main logo" />
@@ -21,7 +21,7 @@ export const Menu = () => {
 
       <ul className={styles.navItemsWrapper}>
         <li>
-          <NavLink to="/" className={({isActive}) => isActive ? styles.active : ''}>Main page</NavLink>
+          <NavLink to="/" className={({isActive}) => isActive ? styles.active : ''}>Main Page</NavLink>
         </li>
         <li>
           <NavLink to='/categories' className={({isActive}) => isActive ? styles.active : ''}>
