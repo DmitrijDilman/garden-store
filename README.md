@@ -38,6 +38,8 @@ setCounter((prevCounter) => {
 git checkout sprint-1          # убедиться, что стоишь на спринте
 git pull                       # подтянуть последние изменения
 git checkout -b feature/header # новая ветка для задачи
+git push -u origin banner
+
 
 
 git add .
