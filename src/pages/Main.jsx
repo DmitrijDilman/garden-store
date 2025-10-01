@@ -1,3 +1,4 @@
+import { Menu } from "../components/Menu";
 import { MainBanner } from "../components/MainBanner";
 import { useState } from "react";
 /* import { Modal } from "../components/Modal";

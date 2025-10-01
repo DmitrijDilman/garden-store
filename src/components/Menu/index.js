@@ -1,7 +1,7 @@
 import styles from "./index.module.css";
 import logo from "../../images/logo.svg";
 import cart from "../../images/cart.svg";
-import burgerMenuIcon from "../../images/burger-menu-icon.svg";
+import burgerMenuIcon from "../../images/icons/burger-menu-icon.svg";
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { productsContext } from "../../contexts/products";

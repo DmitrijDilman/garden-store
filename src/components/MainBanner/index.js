@@ -1,4 +1,5 @@
 import styles from './index.module.css';
+import { Button } from '../Button';
 
 // export const MainBanner = () => {
 
@@ -19,7 +20,7 @@ export const MainBanner = () => {
     <section className={styles.banner}>
       <div className={styles.content}>
         <h1>Amazing Discounts on Garden Products!</h1>
-        <button className={styles.cta}>Check out</button>
+        <Button>Check out</Button>
       </div>
     </section>
   );
