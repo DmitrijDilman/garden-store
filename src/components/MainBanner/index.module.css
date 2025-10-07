@@ -1,0 +1,63 @@
+/* .one {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 10;
+}
+
+.two {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    z-index: 11;
+} */
+
+.banner {
+  /* position: relative;  */
+  background-image: url("../../images/banner.svg"); /* твоя картинка из Figma */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+  /* justify-content: flex-start; */
+  /* color: white; */
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1360px;
+  margin-top: 70px;
+  margin-left: 40px;
+}
+
+.content h1 {
+  font-family: "Montserrat", sans-serif;
+   font-weight: 700;
+  font-size: 96px;
+  line-height: 110px;
+  color: #fff;
+  max-width: 1130px;
+}
+
+.cta {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #2e7d32; /* зелёный */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
